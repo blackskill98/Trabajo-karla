@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Discursos Virales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --secondary: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fact-card {
+            border-left: 4px solid var(--primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .analysis-card {
+            border-top: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .analysis-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">VERIFICA<span class="text-gray-800">TIKTOK</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Inicio</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Scott Traveling</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Murphslife</a>
+                    <a href="index3.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparacion de imagenes</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Análisis de Discursos Virales</h1>
+            <p class="text-xl md:text-2xl mb-8">América Latina</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="#scott" class="btn-primary text-white px-8 py-3 rounded-full font-semibold pulse-animation">
+                    Ver segundo analisis <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="floating">
+                    <i class="fas fa-arrow-down text-3xl opacity-70"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scott Traveling Section -->
+    <section id="scott" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-600">@murphslife</h2>
+                <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">La pobreza en América Latina</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-center mb-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-xl card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-quote-left text-indigo-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Idea principal</h3>
+                        </div>
+                        <blockquote class="italic text-gray-700 pl-4 border-l-2 border-indigo-200">
+                            La pobreza en América Latina, como consecuencia histórica de la desigualdad
+estructural heredada desde la colonia hasta las crisis contemporáneas, continúa
+afectando a millones de personas. En la era digital, plataformas como TikTok se han
+convertido en medios alternativos de denuncia y acción directa, como lo demuestra
+el trabajo de @murphslife, quien visibiliza estas realidades y moviliza ayuda
+humanitaria desde redes sociales.
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-indigo-50 p-6 rounded-xl card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600">Caracterización del Creador</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-user text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Usuario:</strong> @murphslife</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-mobile-alt text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Plataforma:</strong> TikTok</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-flag text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>País:</strong> Estados Unidos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-newspaper text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Línea editorial:</strong> Temas sociales</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-gray-700">
+                            Filántropo y creador de contenido que utiliza su plataforma
+para recaudar fondos y ayudar a familias en situación de pobreza en América
+Latina. Sus videos muestran historias reales y buscan generar conciencia y
+acción social.
+                        </p>
+                        <p class="mt-2 text-gray-700">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modelo de lenguaje utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Modelo de lenguaje utilizado</h3>
+                <p class="text-gray-700">
+                    ChatGPT
+                </p>
+            </div>
+
+            <!-- Prompt utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Prompt utilizado</h3>
+                <p class="text-gray-700">
+                    "Necesito que redactes un resumen académico sobre cómo la pobreza
+en América Latina ha sido históricamente una problemática estructural y
+cómo, en el contexto contemporáneo, creadores de contenido como
+@murphslife utilizan plataformas digitales como TikTok para visibilizar y
+
+combatir esta realidad. El resumen debe incluir antecedentes históricos
+de la pobreza en la región, el papel de las redes sociales en la denuncia
+social actual, y un análisis del impacto del trabajo de este creador desde
+una perspectiva social y comunicacional."
+                </p>
+            </div>
+
+            <!-- Análisis sobre resultado de ChatGPT -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis sobre resultado de ChatGPT</h3>
+                <p class="text-gray-700">
+                    La pobreza en América Latina es una problemática estructural arraigada en
+profundas desigualdades históricas que se remontan al período colonial. Durante la
+colonia, la concentración de tierras, recursos y poder político en manos de élites
+criollas sentó las bases para un sistema económico excluyente. A lo largo del
+tiempo, incluso con los procesos de independencia y modernización, las brechas
+sociales se mantuvieron, reforzadas por modelos económicos dependientes,
+dictaduras, y crisis recurrentes. El resultado ha sido una persistente marginación de
+grandes sectores de la población, especialmente indígenas, afrodescendientes y
+habitantes rurales.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    En el siglo XXI, el surgimiento de plataformas digitales ha transformado los modos
+de denuncia y participación social. Las redes sociales como TikTok se han
+convertido en canales alternativos para visibilizar injusticias sociales que no siempre
+encuentran espacio en los medios tradicionales. En este contexto, creadores de
+contenido como @murphslife han adquirido un papel relevante. A través de
+narrativas audiovisuales emotivas, @murphslife expone las condiciones de vida de
+personas en situación de pobreza en distintos países de América Latina,
+promoviendo campañas de donación directa que generan cambios tangibles.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    Desde una perspectiva social y comunicacional, su trabajo representa una forma
+innovadora de activismo digital. Combina la estética del contenido viral con un
+enfoque humanitario, logrando movilizar comunidades globales hacia la acción
+concreta. Asimismo, desafía el rol tradicional de los medios de comunicación al
+colocar en el centro del discurso a sujetos históricamente invisibilizados. De este
+modo, @murphslife no solo contribuye a mitigar casos puntuales de pobreza, sino
+
+que también evidencia las posibilidades transformadoras de la comunicación digital
+en contextos de desigualdad estructural.
+                </p>
+            </div>
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis</h3>
+                <p class="text-gray-700">
+                    La IA hizo un resumen bien ordenado, empezando por el origen de la pobreza en
+América Latina, luego explicó cómo ahora las redes sociales ayudan a visibilizar
+esta realidad y finalizó con el caso de @murphslife. Usó un lenguaje formal, propio
+de textos académicos, y mezcló ideas de historia, sociedad y comunicación para
+darle más profundidad.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    También se nota que razona con lógica, usando ejemplos reales para sostener lo
+que dice. En lugar de solo contar hechos, analiza cómo las redes, como TikTok, se
+han vuelto clave para denunciar injusticias. Así, la IA logró un texto claro, con
+sentido crítico y útil para entender el tema desde una perspectiva actual.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Pasos AMI para Verificación</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-user-tie text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Autor:</strong> contenido generado con supervisión del grupo y uso de IA.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-book text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Fuente:</strong> datos del Banco Mundial, informes oficiales.
+·**Se verificó la coherencia y veracidad de la información, sin desinformación.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Fecha:</strong> Febrero 2024</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-film text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Tipo de medio:</strong> TikTok (formato viral)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bullseye text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Intención:</strong> humanitaria y solidaria</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video selfie -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Video Selfie</h3>
+                <div class="flex justify-center">
+                    <iframe src="https://drive.google.com/file/d/1hiNpCdUVHcSullDUO0OUD33kF4Pdlxd6/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

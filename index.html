@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Discursos Virales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --secondary: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fact-card {
+            border-left: 4px solid var(--primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .analysis-card {
+            border-top: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .analysis-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">VERIFICA<span class="text-gray-800">TIKTOK</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Inicio</a>
+                    <a href="#scott" class="nav-link text-gray-600 hover:text-indigo-600">Scott Traveling</a>
+                    <a href="index2.html" class="nav-link text-gray-600 hover:text-indigo-600">Murphslife</a>
+                    <a href="index3.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparacion de imagenes</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Análisis de Discursos Virales</h1>
+            <p class="text-xl md:text-2xl mb-8">Verificación de contenido sobre pobreza en México y América Latina</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="#scott" class="btn-primary text-white px-8 py-3 rounded-full font-semibold pulse-animation">
+                    Ver primer análisis <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="floating">
+                    <i class="fas fa-arrow-down text-3xl opacity-70"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scott Traveling Section -->
+    <section id="scott" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-600">@ScottTraveling</h2>
+                <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Propuesta viral para reducir la pobreza en México</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-center mb-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-xl card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-quote-left text-indigo-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Discurso Original</h3>
+                        </div>
+                        <blockquote class="italic text-gray-700 pl-4 border-l-2 border-indigo-200">
+                            "Hay que eliminar la pobreza en México y para eso todos los mexicanos deben aportar solo un peso diario. Si 120 millones lo hacen, podríamos reunir millones para ayudar a quien más lo necesita. Ese fondo se podría rifar cada día, beneficiando a miles. México tiene cerca del 36% de su población en pobreza, casi 47 millones de personas según CONEVAL. Si todos ponemos, sería una forma de solidaridad nacional."
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-indigo-50 p-6 rounded-xl card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600">Caracterización del Creador</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-user text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Usuario:</strong> @scotttraveling</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-mobile-alt text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Plataforma:</strong> TikTok</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-flag text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>País:</strong> México</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-newspaper text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Línea editorial:</strong> Scott Adrian Moreno es originario de México, exactamente en Uriangato, Guanajuato. Crea contenido desde 2015; luego pasó a generar impacto social realizando rifas de autos, cenas navideñas y también donaciones de tanques de oxígeno. Cuenta con 355,800 seguidores en TikTok y más de 700,000 en YouTube e Instagram. En sus diferentes videos ha aparecido con su novia llamada Roxy García en diferentes campañas benéficas; organiza eventos con voluntarios y maestros en zonas rurales. Publica contenidos filantrópicos para “ayudar a quienes más lo necesitan”, especialmente en comunidades vulnerables. De sus últimos 20 TikToks, al menos 5 hablan directamente de pobreza, donaciones o justicia social (ej. rifas, solidaridad, donación de oxígeno).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modelo de lenguaje utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Modelo de lenguaje utilizado</h3>
+                <p class="text-gray-700">
+                    ChatGPT
+                </p>
+            </div>
+
+            <!-- Prompt utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Prompt utilizado</h3>
+                <p class="text-gray-700">
+                    “Analiza este discurso de TikTok del usuario @scott_traveling sobre aportar un peso diario para combatir la pobreza en México. Necesito que verifiques si el dato ‘36 % de la población en pobreza’ corresponde a las cifras oficiales de CONEVAL entre el año 2022-2023. Evalúa la viabilidad económica y técnica de la propuesta de ‘un peso diario rifado’. También identifica el tono, estilo persuasivo y si hay argumentos sólidos, y señala posibles fortalezas, riesgos o limitaciones en el discurso.”
+                </p>
+            </div>
+
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis de chat ChatGPT</h3>
+                <p class="text-gray-700">
+                    El dato “36 % de la población en pobreza (~47 M personas)” fue confirmado por CONEVAL: 36,3 % en 2022, equivalente a ~46,8 M (fuente: Las Estrellas). La propuesta del “peso diario y rifas” es una idea original del influencer, sin respaldo técnico ni evaluación de impacto económico; entra en lo simbólico y anecdótico. En cuanto a la viabilidad, no existen estudios económicos que avalen la sostenibilidad de rifas diarias; implicaría logística costosa y no aborda causas estructurales. El tono y estilo del discurso es persuasivo y emocional, busca generar solidaridad; mezcla datos con una solución creativa, pero con carencia de fundamento técnico. Entre las fortalezas y riesgos se identifican las siguientes: como fortaleza, tiene un enfoque simbólico movilizador que visibiliza la pobreza; y como riesgo, refuerza ideas simplistas, podría generar falsas expectativas y necesita estudios complementarios.
+                </p>
+
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis sobre resultado de ChatGPT</h3>
+                <p class="text-gray-700">
+                    Según el análisis de ChatGPT, el discurso de @scott_traveling se basa en un dato real sobre la pobreza en México, ya que el 36 % de la población vive en esta condición según CONEVAL. Sin embargo, la propuesta del “peso diario rifado” no cuenta con respaldo técnico ni estudios económicos. La IA reconoce que es una idea simbólica, con intención de generar conciencia, pero no una solución estructural.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    Aun así, las respuestas de ChatGPT fueron algo generales y no profundizaron mucho en la viabilidad económica o en ejemplos concretos. El análisis se centró más en el tono emocional y en destacar que el mensaje busca movilizar a las personas, aunque puede dar una visión simplificada del problema. A pesar de eso, el discurso cumple con visibilizar la pobreza como un tema urgente.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Pasos AMI para Verificación</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-user-tie text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Autor:</strong> Influencer sin formación técnica en el tema</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-book text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Fuente:</strong> Datos contrastados con CONEVAL</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Fecha:</strong> Febrero 2024</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-film text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Tipo de medio:</strong> TikTok (formato viral)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bullseye text-indigo-500 mt-1 mr-3"></i>
+                                <span><strong>Intención:</strong> Proponer solución colectiva a la pobreza</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video selfie -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Video Selfie</h3>
+                <div class="flex justify-center">
+                    <iframe src="https://drive.google.com/file/d/1XCdsGgQOyJAb3T7NQeLfCRy0tlD51oXj/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Discursos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --secondary: #7c3aed;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .analysis-card {
+            border-top: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.1);
+        }
+
+        /* Ajustes para dispositivos móviles */
+        @media (max-width: 768px) {
+            .nav-link {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .btn-primary {
+                width: 100%;
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+            iframe {
+                width: 100%; /* Asegura que el iframe sea responsivo */
+                height: auto; /* Ajusta la altura automáticamente */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">VERIFICA<span class="text-gray-800">TIKTOK</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Inicio</a>
+                    <a href="#scott" class="nav-link text-gray-600 hover:text-indigo-600">Scott Traveling</a>
+                    <a href="index2.html" class="nav-link text-gray-600 hover:text-indigo-600">Murphslife</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparacion de imagenes</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">imagenes IA</h1>
+            <p class="text-xl md:text-2xl mb-8"></p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="#scott" class="btn-primary text-white px-8 py-3 rounded-full font-semibold pulse-animation">
+                    Ver tercer análisis <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+            <div class="flex justify-center">
+                <div class="floating">
+                    <i class="fas fa-arrow-down text-3xl opacity-70"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scott Traveling Section -->
+    <section id="scott" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-600">Comparación de imágenes</h2>
+                <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">En este ejercicio se desarrollará la comparación de imágenes de dos IA para ver cuáles son sus resultados, en base a una descripción que se dará, esta descripción lleva el tema elegido, la migración de personas de El Salvador hacia Estados Unidos por una mejor economía.</p>
+            </div>
+
+            <!-- Modelo de lenguaje utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Modelo de lenguaje utilizado</h3>
+                <p class="text-gray-700">ImagineArt y Artlist</p>
+            </div>
+
+            <!-- Prompt utilizado -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Prompt utilizado</h3>
+                <p class="text-gray-700">
+                    "Un grupo de migrantes salvadoreños caminando juntos por una carretera polvorienta rumbo a Estados Unidos. Llevan mochilas, algunas personas cargan niños, otros usan gorras para protegerse del sol. El ambiente transmite esperanza y sacrificio. Hay un amanecer al fondo, simbolizando un nuevo comienzo. Se ven paisajes rurales de El Salvador en el fondo, mientras avanzan con determinación buscando mejores oportunidades económicas."
+                </p>
+            </div>
+
+            <!-- Diferencias entre plataformas -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Diferencias entre ImagineArt y Artlist</h3>
+                <p class="text-gray-700">
+                    <strong>ImagineArt:</strong> Generación artística de imágenes con IA. Más centrado en lo artístico, fantasía, ilustración. Interfaz enfocada solo en IA de imágenes. Tiene comunidad activa donde se comparten imágenes.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    <strong>Artlist:</strong> Plataforma de contenido creativo (audio, video, y ahora también imágenes con IA). Más enfocado a lo realista y comercial. Interfaz integrada con su ecosistema multimedia (audio, video, IA). Menos centrado en comunidad, más en producción.
+                </p>
+            </div>
+
+            <!-- Análisis -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis</h3>
+                <p class="text-gray-700">
+                    El prompt que se utilizó para ChatGPT es corto pero lleva lo esencial para que nos pueda brindar un prompt con base a lo que le pedí, que es un prompt para las IA generadoras de imágenes, así obtener la imagen necesaria para lo que la necesitemos.
+                </p>
+                <p class="text-gray-700 mt-2">
+                    Con base al prompt que nos dio ChatGPT para las IA de imágenes, fue bastante específico a la hora de redactarlo ya que lleva cosas importantes para que las IA nos puedan brindar una imagen mejor, solo que faltó un poquito más de detalles para que la imagen sea más entendible.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600 text-center">Comparación Visual entre ImagineArt y Artlist</h3>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="text-center">
+                        <h4 class="text-lg font-medium text-gray-800 mb-2">ImagineArt</h4>
+                        <img src="Imagen1.jpg" alt="Imagen generada por ImagineArt" class="rounded-lg shadow-lg mx-auto w-full max-w-sm">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-lg font-medium text-gray-800 mb-2">Artlist</h4>
+                        <img src="Imagen2.jpg" alt="Imagen generada por Artlist" class="rounded-lg shadow-lg mx-auto w-full max-w-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video selfie -->
+            <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Video Selfie</h3>
+                <div class="flex justify-center">
+                    <iframe src="https://drive.google.com/file/d/1feI4B2RwJRd9i35K4cLbL7h90JSGqk_A/preview" width="800" height="600" allow="autoplay" class="w-full max-w-3xl"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
