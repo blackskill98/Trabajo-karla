@@ -106,11 +106,19 @@
                     <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Inicio</a>
                     <a href="#scott" class="nav-link text-gray-600 hover:text-indigo-600">Scott Traveling</a>
                     <a href="index2.html" class="nav-link text-gray-600 hover:text-indigo-600">Murphslife</a>
-                    <a href="index3.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparacion de imagenes</a>
+                    <a href="index3.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparación de imágenes</a>
                 </div>
-                <button class="md:hidden text-gray-600 focus:outline-none">
+                <button class="md:hidden text-gray-600 focus:outline-none" id="menu-toggle">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
+            </div>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="flex flex-col space-y-2 px-6 py-3">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600">Inicio</a>
+                <a href="#scott" class="nav-link text-gray-600 hover:text-indigo-600">Scott Traveling</a>
+                <a href="index2.html" class="nav-link text-gray-600 hover:text-indigo-600">Murphslife</a>
+                <a href="index3.html" class="nav-link text-gray-600 hover:text-indigo-600">Comparación de imágenes</a>
             </div>
         </div>
     </nav>
@@ -205,6 +213,7 @@
                 <p class="text-gray-700">
                     El dato “36 % de la población en pobreza (~47 M personas)” fue confirmado por CONEVAL: 36,3 % en 2022, equivalente a ~46,8 M (fuente: Las Estrellas). La propuesta del “peso diario y rifas” es una idea original del influencer, sin respaldo técnico ni evaluación de impacto económico; entra en lo simbólico y anecdótico. En cuanto a la viabilidad, no existen estudios económicos que avalen la sostenibilidad de rifas diarias; implicaría logística costosa y no aborda causas estructurales. El tono y estilo del discurso es persuasivo y emocional, busca generar solidaridad; mezcla datos con una solución creativa, pero con carencia de fundamento técnico. Entre las fortalezas y riesgos se identifican las siguientes: como fortaleza, tiene un enfoque simbólico movilizador que visibiliza la pobreza; y como riesgo, refuerza ideas simplistas, podría generar falsas expectativas y necesita estudios complementarios.
                 </p>
+            </div>
 
             <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
                 <h3 class="text-xl font-semibold mb-4 text-indigo-600">Análisis sobre resultado de ChatGPT</h3>
@@ -223,7 +232,7 @@
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <i class="fas fa-user-tie text-indigo-500 mt-1 mr-3"></i>
-                                <span><strong>Autor:</strong> Influencer sin formación técnica en el tema</span>
+                                <span><strong>Autor:</strong> Influencer creador de contenido</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-book text-indigo-500 mt-1 mr-3"></i>
@@ -254,10 +263,24 @@
             <div class="bg-indigo-50 p-6 rounded-xl shadow-sm mb-8 card-hover">
                 <h3 class="text-xl font-semibold mb-4 text-indigo-600">Video Selfie</h3>
                 <div class="flex justify-center">
-                    <iframe src="https://drive.google.com/file/d/1XCdsGgQOyJAb3T7NQeLfCRy0tlD51oXj/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1XCdsGgQOyJAb3T7NQeLfCRy0tlD51oXj/preview" width="100%" height="480" allow="autoplay" class="rounded-lg"></iframe>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Script para el menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+                mobileMenu.style.display = "block";
+            } else {
+                mobileMenu.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
